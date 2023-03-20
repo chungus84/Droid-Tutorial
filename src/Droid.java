@@ -7,6 +7,7 @@ public class Droid {
         batteryLevel = 100;
     }
     public static void main(String[] args) {
-
+        Droid codeyDroid = new Droid("Codey");
+        System.out.println(codeyDroid.name);
     }
 }
