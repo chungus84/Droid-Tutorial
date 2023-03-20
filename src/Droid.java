@@ -8,6 +8,10 @@ public class Droid {
     }
     public static void main(String[] args) {
         Droid codeyDroid = new Droid("Codey");
-        System.out.println(codeyDroid.name);
+        System.out.println(codeyDroid);
+    }
+
+    public String toString() {
+        return "Hello, I am the droid: " + name;
     }
 }
