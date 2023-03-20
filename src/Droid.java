@@ -6,9 +6,15 @@ public class Droid {
         name = droidName;
         batteryLevel = 100;
     }
+
+    public void performTask(String task) {
+        System.out.println(name + " is performing task: " + task);
+        batteryLevel -= 10;
+    }
     public static void main(String[] args) {
         Droid codeyDroid = new Droid("Codey");
         System.out.println(codeyDroid);
+        codeyDroid.performTask("Kill all humans");
     }
 
     public String toString() {
