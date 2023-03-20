@@ -16,11 +16,24 @@ public class Droid {
         System.out.println(name + "'s battery level is at: " + batteryLevel);
     }
 
+    public void energyTransfer(Droid otherDroid) {
+        int thisDroidLevel = batteryLevel;
+        batteryLevel = otherDroid.batteryLevel;
+        otherDroid.batteryLevel = thisDroidLevel;
+    }
+
     public static void main(String[] args) {
         Droid codeyDroid = new Droid("Codey");
         System.out.println(codeyDroid);
         codeyDroid.performTask("Kill all humans");
         codeyDroid.energyReport();
+
+        Droid daveDroid = new Droid("Dave");
+        daveDroid.energyReport();
+        codeyDroid.energyTransfer(daveDroid);
+        codeyDroid.energyReport();
+        daveDroid.energyReport();
+
     }
 
     public String toString() {
